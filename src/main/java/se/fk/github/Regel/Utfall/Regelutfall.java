@@ -5,12 +5,21 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Regelutfall {
-    public Utfallstyper typ;
-    public String varde;
+    private Utfallstyper typ;
+    private String varde;
 
     public Regelutfall(Utfallstyper typ, String varde)
     {
         this.typ = typ;
+        this.varde = varde;
+    }
+
+    public void setTyp(Utfallstyper typ) {
+        this.typ = typ;
+    }
+
+    public void setVarde(String varde)
+    {
         this.varde = varde;
     }
 

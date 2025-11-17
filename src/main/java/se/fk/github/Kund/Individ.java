@@ -1,17 +1,39 @@
 package se.fk.github.Kund;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import se.fk.github.Kundbehov.RollIKundbehov;
 
 import java.util.UUID;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Individ {
-    public UUID id;
-    public String version;
-    public RollIKundbehov rollIKundbehov;
+    private UUID id;
+    private String version;
+    private RollIKundbehov rollIKundbehov;
+
+    public Individ(){}
+
+    public Individ(UUID id, String version)
+    {
+        this.id = id;
+        this.version = version;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public RollIKundbehov getRollIKundbehov() {
+        return rollIKundbehov;
+    }
+
+    public void setRollIKundbehov(RollIKundbehov rollIKundbehov) {
+        this.rollIKundbehov = rollIKundbehov;
+    }
 }

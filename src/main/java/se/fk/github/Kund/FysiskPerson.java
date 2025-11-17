@@ -1,30 +1,73 @@
 package se.fk.github.Kund;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import se.fk.github.Kund.Folkbokforing.Adress;
 import se.fk.github.Kundbehov.RollIKundbehov;
 
 import java.util.UUID;
 
-@Data
-@EqualsAndHashCode(callSuper = true)
-@NoArgsConstructor
-@AllArgsConstructor
 public class FysiskPerson extends Individ{
-    public String personnummer;
-    public String fornamn;
-    public String efternamn;
-    public Kon kon;
-    public RollIKundbehov rollIKundbehov;
+    private String personnummer;
+    private String fornamn;
+    private String efternamn;
+    private Kon kon;
+    private RollIKundbehov rollIKundbehov;
+    private Adress adress;
 
-    public FysiskPerson(UUID id, String version, RollIKundbehov rollIKundbehov, String personnummer, String fornamn, String efternamn, Kon kon)
+    public FysiskPerson(UUID id, String version, String personnummer, String fornamn, String efternamn, Kon kon, Adress adress)
     {
-        super(id, version, rollIKundbehov);
+        super(id, version);
         this.personnummer = personnummer;
         this.fornamn = fornamn;
         this.efternamn = efternamn;
         this.kon = kon;
+        this.adress = adress;
+    }
+
+    public String getPersonnummer() {
+        return personnummer;
+    }
+
+    public void setPersonnummer(String personnummer) {
+        this.personnummer = personnummer;
+    }
+
+    public String getFornamn() {
+        return fornamn;
+    }
+
+    public void setFornamn(String fornamn) {
+        this.fornamn = fornamn;
+    }
+
+    public String getEfternamn() {
+        return efternamn;
+    }
+
+    public void setEfternamn(String efternamn) {
+        this.efternamn = efternamn;
+    }
+
+    public Kon getKon() {
+        return kon;
+    }
+
+    public void setKon(Kon kon) {
+        this.kon = kon;
+    }
+
+    public RollIKundbehov getRollIKundbehov() {
+        return rollIKundbehov;
+    }
+
+    public void setRollIKundbehov(RollIKundbehov rollIKundbehov) {
+        this.rollIKundbehov = rollIKundbehov;
+    }
+
+    public Adress getAdress() {
+        return adress;
+    }
+
+    public void setAdress(Adress adress) {
+        this.adress = adress;
     }
 }
