@@ -1,6 +1,7 @@
 package se.fk.github.Kundbehov;
 
 import se.fk.github.Produkt.Erbjudande;
+import se.fk.github.Produkt.Produkt;
 
 import java.time.OffsetDateTime;
 import java.util.UUID;
@@ -15,10 +16,10 @@ public class Kundbehov {
     private String andringsorsak;
     private Kundbehovsflode kundbehovsflode;
     private RollIKundbehov rollIKundbehov;
-    private Erbjudande  erbjudande;
+    private Produkt produkt;
 
     public Kundbehov(UUID id, String version, OffsetDateTime kundbehovsdatum, Kundbehovsstatus kundbehovsstatus, OffsetDateTime period, Avsikt avsikt,
-                     String andringsorsak, Kundbehovsflode kundbehovsflode, RollIKundbehov rollIKundbehov,  Erbjudande erbjudande)
+                     String andringsorsak, Kundbehovsflode kundbehovsflode, RollIKundbehov rollIKundbehov,  Produkt produkt)
     {
         this.id = id;
         this.version = version;
@@ -29,7 +30,7 @@ public class Kundbehov {
         this.andringsorsak = andringsorsak;
         this.kundbehovsflode = kundbehovsflode;
         this.rollIKundbehov = rollIKundbehov;
-        this.erbjudande = erbjudande;
+        this.produkt = produkt;
     }
 
     public UUID getId() {
@@ -100,11 +101,11 @@ public class Kundbehov {
         this.rollIKundbehov = rollIKundbehov;
     }
 
-    public Erbjudande getErbjudande() {
-        return erbjudande;
+    public Produkt getProdukt() {
+        return produkt;
     }
 
-    public void setErbjudande(Erbjudande erbjudande) {
-        this.erbjudande = erbjudande;
+    public void setProdukt(Produkt produkt) {
+        this.produkt = produkt;
     }
 }

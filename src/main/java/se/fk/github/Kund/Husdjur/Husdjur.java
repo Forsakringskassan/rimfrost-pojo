@@ -4,7 +4,6 @@ import se.fk.github.Kund.FysiskPerson;
 import se.fk.github.Kund.Husdjur.Ras.Ras;
 import se.fk.github.Kund.Individ;
 import se.fk.github.Kund.Kon;
-import se.fk.github.Kundbehov.RollIKundbehov;
 
 import java.util.UUID;
 
